@@ -141,13 +141,15 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/appendprefix</li>
+
+<li>$:/appendtags</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/favicon.ico</li>
-
-<li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
@@ -375,6 +377,8 @@ Error message and password prompt
 
 <li>incoming 11</li>
 
+<li>incoming 12</li>
+
 <li>incoming 2</li>
 
 <li>incoming 3</li>
@@ -597,6 +601,12 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20210323045743540" modified="20210323045743697" title="$:/appendprefix">
+<pre>BB</pre>
+</div>
+<div created="20210323045940184" modified="20210323045941773" title="$:/appendtags">
+<pre>MYLIFE</pre>
+</div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.23">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -10468,11 +10478,6 @@ Error message and password prompt
 <div created="20210322041133848" modified="20210322172236257" title="$:/favicon.ico" type="image/png">
 <pre>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</pre>
 </div>
-<div status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[$:/plugins/kookma/commander]]</pre>
-</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
@@ -10512,7 +10517,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210322202957774" list="Explainer incoming [[Process Incoming]] [[Process By Hand]]" modified="20210323023223803" title="$:/StoryList">
+<div created="20210322202957774" list="Explainer incoming [[Process Incoming]] [[Process By Hand]]" modified="20210323050003803" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10913,19 +10918,9 @@ title | url | description | tags
 <div created="20210322152415259" modified="20210322172814749" tags="Developer $:/tags/Link Widgets" title="IfTref Widget" url="http://gwiz.tiddlyspot.com/">
 <pre>Widget that tests for the value of a TextReference sends different widget messages accordingly</pre>
 </div>
-<div created="20210322135034096" modified="20210323023211109" tags="tool" title="incoming" type="text/plain">
+<div created="20210322135034096" modified="20210323045610134" tags="tool" title="incoming" type="text/plain">
 <pre>#Home Lifestyle
-HL Baby journal|http://a-penguin-in-redmond.blogspot.mx/2014/02/creating-baby-journal-with-tiddlywiki-5.html| |Home Lifestyle
-HL Nutrient database|http://nutrition-database.tiddlyspot.com/| derived from USDA sources.|Home Lifestyle
-HL Carnet De Recettes|http://carnetderecettes.tiddlyspot.com/|for organizing recipes|Home Lifestyle
-HL Cook!|http://tobibeer.github.io/me/cook/cook.html|for organizing recipes|Home Lifestyle
-HL Journals|http://tw5magick.tiddlyspot.com/|How to create buttons for different kinds of journal events.|Home Lifestyle
-HL Larry's Cookbook|http://twcookbook.tiddlyspot.com/| |Home Lifestyle
-HL Library tracker|http://nolearningrequired-full.tiddlyspot.com/| |Home Lifestyle
-HL Pet diary|http://ooktech.com/jed/ExampleWikis/PetDiary/|to track a pet's development and activities|Home Lifestyle
-HL Recipe plugin|https://odinjorna.github.io/recipe-plugin/|adds a way to input, store and display recipes in your Tiddlywiki. All the information of the recipe is stored in user-fields, so the template is higly customizable without the need to change every recipe.|Home Lifestyle
-HL Resumé builder|http://ooktech.com/jed/ExampleWikis/ResumeBuilderWiki/| |Home Lifestyle
-HL TW5 Suitcase|http://tw5-suitcase.tiddlyspot.com/|for organizing packing lists for travel|Home Lifestyle
+Baby journal test|http://a-penguin-in-redmond.blogspot.mx/2014/02/creating-baby-journal-with-tiddlywiki-5.html| |Home Lifestyle
 </pre>
 </div>
 <div created="20210322022322630" modified="20210322033426555" tags="tool" title="incoming 1" type="text/plain">
@@ -10995,6 +10990,21 @@ fg TiddlyWiki game test|http://zorklike.tiddlyspot.com/|click the buttons to adv
 
 #GitHub
 gi github-link (Yazd)|https://tw-scripts.github.io/Yazd/|Creates a link using Tiddlywiki big button to a github page|GitHub
+</pre>
+</div>
+<div created="20210323045558406" modified="20210323045600036" tags="tool" title="incoming 12" type="text/plain">
+<pre>#Home Lifestyle
+HL Baby journal|http://a-penguin-in-redmond.blogspot.mx/2014/02/creating-baby-journal-with-tiddlywiki-5.html| |Home Lifestyle
+HL Nutrient database|http://nutrition-database.tiddlyspot.com/| derived from USDA sources.|Home Lifestyle
+HL Carnet De Recettes|http://carnetderecettes.tiddlyspot.com/|for organizing recipes|Home Lifestyle
+HL Cook!|http://tobibeer.github.io/me/cook/cook.html|for organizing recipes|Home Lifestyle
+HL Journals|http://tw5magick.tiddlyspot.com/|How to create buttons for different kinds of journal events.|Home Lifestyle
+HL Larry's Cookbook|http://twcookbook.tiddlyspot.com/| |Home Lifestyle
+HL Library tracker|http://nolearningrequired-full.tiddlyspot.com/| |Home Lifestyle
+HL Pet diary|http://ooktech.com/jed/ExampleWikis/PetDiary/|to track a pet's development and activities|Home Lifestyle
+HL Recipe plugin|https://odinjorna.github.io/recipe-plugin/|adds a way to input, store and display recipes in your Tiddlywiki. All the information of the recipe is stored in user-fields, so the template is higly customizable without the need to change every recipe.|Home Lifestyle
+HL Resumé builder|http://ooktech.com/jed/ExampleWikis/ResumeBuilderWiki/| |Home Lifestyle
+HL TW5 Suitcase|http://tw5-suitcase.tiddlyspot.com/|for organizing packing lists for travel|Home Lifestyle
 </pre>
 </div>
 <div created="20210322033428485" modified="20210322135030958" tags="tool" title="incoming 2" type="text/plain">
@@ -11270,16 +11280,20 @@ Téléologie et fonctions biologiques|http://tesis.tiddlyspot.com/#.|a thesis ex
 tags/Link
 </pre>
 </div>
-<div created="20210322022337069" modified="20210322222443204" tags="tool" title="Process Incoming">
-<pre>&lt;$button&gt;Process
+<div created="20210322022337069" modified="20210323045931117" tags="tool" title="Process Incoming">
+<pre>Add Tags: &lt;$edit-text tiddler=&quot;$:/appendtags&quot; field=&quot;text&quot; tag=&quot;input&quot; size=&quot;40&quot; default=&quot;Tagme&quot;/&gt;&lt;br style=&quot;height:1.5em&quot;/&gt;
+Add Prefix ID: &lt;$edit-text tiddler=&quot;$:/appendprefix&quot; field=&quot;text&quot; tag=&quot;input&quot; size=&quot;40&quot; default=&quot;AA&quot;/&gt;&lt;br/&gt;
+
+
+&lt;$button&gt;Process
 &lt;$list filter=&quot;[[incoming]get[text]splitregexp[\n]!prefix[#]]&quot;&gt;
 &lt;$list filter=&quot;[all[current]splitregexp[\|]nth[1]]&quot; variable=&quot;title&quot; &gt;
 &lt;$list filter=&quot;[all[current]splitregexp[\|]nth[2]]&quot; variable=&quot;url&quot; &gt;
 &lt;$list filter=&quot;[all[current]splitregexp[\|]nth[3]]&quot; variable=&quot;description&quot; &gt;
 &lt;$list filter=&quot;[all[current]splitregexp[\|]nth[4]]&quot; variable=&quot;tags&quot; &gt;
 &lt;$action-createtiddler 
-  $basetitle=&lt;&lt;title&gt;&gt; 
- tags={{{ [[tags-link]addsuffix[ ]addsuffix&lt;tags&gt;] }}} 
+  $basetitle={{{[&lt;title&gt;addprefix[-]addprefix{$:/appendprefix}]}}} 
+ tags={{{ [[tags-link]addsuffix[ ]addsuffix&lt;tags&gt;addsuffix[ ]addsuffix{$:/appendtags}] }}} 
  text={{{[&lt;title&gt;addsuffix[ - ]addsuffix&lt;description&gt;] }}}
  url=&lt;&lt;url&gt;&gt;
 /&gt;
@@ -11290,7 +11304,7 @@ tags/Link
 &lt;/$list&gt;
 &lt;/$button&gt;
 
-
+{{$:/appendprefix}}
 
 
 
