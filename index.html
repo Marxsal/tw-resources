@@ -259,6 +259,8 @@ Error message and password prompt
 
 <li>d3plugin</li>
 
+<li>Dashboard</li>
+
 <li>Date Macro demos</li>
 
 <li>Date picker plugin</li>
@@ -523,6 +525,8 @@ Error message and password prompt
 
 <li>incoming 2</li>
 
+<li>incoming 20</li>
+
 <li>incoming 3</li>
 
 <li>incoming 4</li>
@@ -608,8 +612,6 @@ Error message and password prompt
 <li>Portable 3D</li>
 
 <li>Pragma Comment</li>
-
-<li>Process By Hand</li>
 
 <li>Process Incoming</li>
 
@@ -724,6 +726,12 @@ Error message and password prompt
 <li>Tobibeer dev</li>
 
 <li>TOC Counting</li>
+
+<li>Top + Left (Ton Gerner) (UI4)</li>
+
+<li>Top toolbar plugin (Ton Gerner) (UI4)</li>
+
+<li>Topmenu plugin  (UI4)</li>
 
 <li>Trace-variable example</li>
 
@@ -875,11 +883,11 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20210323045743540" modified="20210323234022891" title="$:/appendprefix">
-<pre>UI3</pre>
+<div created="20210323045743540" modified="20210324135431872" title="$:/appendprefix">
+<pre>UI4</pre>
 </div>
-<div created="20210323045940184" modified="20210323234018349" title="$:/appendtags">
-<pre>Layout UI $:/review</pre>
+<div created="20210323045940184" modified="20210324135428146" title="$:/appendtags">
+<pre>Layout UI $:/review TopMenu</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.23">
 <pre>{
@@ -10796,7 +10804,7 @@ Error message and password prompt
 <div created="20210322022429817" modified="20210324034058450" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210322024857001" modified="20210324034524527" title="$:/state/sidebar">
+<div created="20210322024857001" modified="20210324143722235" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210322203058701" modified="20210322203058701" title="$:/state/tab--103319216">
@@ -10820,7 +10828,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210324125150697" list="$:/Import [[bootstrap-reboot icon]] [[IM-TW Icons]] favicon.ico $:/favicon.ico Explainer" modified="20210324130749775" title="$:/StoryList">
+<div created="20210324135338878" list="Explainer incoming [[Process Incoming]] Dashboard [[Top + Left (Ton Gerner) (UI4)]] [[Top toolbar plugin (Ton Gerner) (UI4)]] [[Topmenu plugin  (UI4)]]" modified="20210324143335873" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11027,6 +11035,35 @@ Error message and password prompt
 </div>
 <div created="20210322144203110" modified="20210322145229675" tags="DataVisualizations $:/tags/Link D3.js" title="d3plugin" url="http://ooktech.com/jed/ExampleWikis/d3plugin/">
 <pre>d3plugin -  Extends the d3.js plugin past being just a proof of concept</pre>
+</div>
+<div created="20210322024430988" modified="20210324141947911" tags="tool" title="Dashboard">
+<pre>&lt;!-- &lt;$list filter=&quot;[tag[tags-link]]&quot;&gt; 
+&lt;$list filter=&quot;[tag[$:/tags/Link]filter&lt;myfilt&gt;]&quot;&gt;
+
+--&gt;
+&lt;table&gt;
+&lt;$vars myfilt=&quot;[get[url]prefix[https://g]]&quot;&gt;
+&lt;$list filter=&quot;[tag[tags-link]]&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;$link&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt; &lt;/td&gt;
+&lt;td&gt;&lt;$edit-text field=&quot;text&quot; tag=&quot;input&quot; size=&quot;80&quot;/&gt; &lt;/td&gt;
+&lt;td&gt;&lt;a href={{!!url}} target=&quot;_blank&quot;.&gt;link&lt;/a&gt; &lt;/td&gt;
+&lt;td&gt;&lt;$checkbox tag=&quot;$:/tags/Link&quot;&gt;Ok&lt;/$checkbox&gt;&lt;/td&gt;
+&lt;td&gt;&lt;$checkbox tag=&quot;badurl&quot;&gt;badurl&lt;/$checkbox&gt;&lt;/td&gt;
+&lt;td&gt;&lt;$checkbox tag=&quot;problem&quot;&gt;problem&lt;/$checkbox&gt;&lt;/td&gt;
+&lt;td&gt;&lt;$checkbox tag=&quot;tags-link&quot;&gt;un/list&lt;/$checkbox&gt;&lt;/td&gt;
+&lt;td&gt;
+{{||$:/core/ui/EditTemplate/tags}}
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;&lt;td colspan=&quot;5&quot;&gt;&lt;$edit-text field=&quot;url&quot; tag=&quot;input&quot; size=&quot;100&quot;/&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/$list&gt;
+&lt;/$vars&gt;
+&lt;/table&gt;
+
+&lt;&lt;title&gt;&gt; - &lt;&lt;description&gt;&gt; - &lt;&lt;url&gt;&gt;&lt;br/&gt;&lt;br/&gt;
+tags/Link
+</pre>
 </div>
 <div created="20210322033545298" modified="20210322041705478" tags="$:/tags/Link" title="Date Macro demos" url="http://ooktech.com/jed/ExampleWikis/DateMacros/">
 <pre>Date Macro demos</pre>
@@ -11399,40 +11436,11 @@ title | url | description | tags
 <div created="20210323143253976" modified="20210323154508103" tags="Images HTML $:/tags/Link" title="IM-twspimg" url="http://welford.github.io/">
 <pre>Add images as the background of spans</pre>
 </div>
-<div created="20210322135034096" modified="20210323235625077" tags="tool" title="incoming" type="text/plain">
-<pre>#Layout UI
-Shiraz multicol macro|https://kookma.github.io/TW-Shiraz/#| |StoryRiver
-Stories plugin / Two columns of tiddlers (Stroll)|https://giffmex.org/gifts/documenting.tw.html#Two%20columns%20of%20tiddlers|plugin and documentation on how to have two columns of tiddlers like Stroll.|StoryRiver| 
-#Layout 
-Muuri / TiddlyTouch|https://burningtreec.github.io/tiddlywiki-muuri/| |Muuri
-Andy Matuschak's Evergreen notes|https://notes.andymatuschak.org/| system into TiddlyWiki| 
-LibreNote|https://librenote.aerobatic.io/| |
-#Grid
-Grid|https://szenio.de/Grid/|This Tests implements a Grid-Layout to Tiddlywiki.|Grid|| 
-Muuri / TiddlyTouch|https://burningtreec.github.io/tiddlywiki-muuri/|Includes scaffolding within a tiddler, dragging to reorder tiddlers, choosing the number of columns|Muuri
-Teasers|http://teasers.tiddlyspot.com/| || 
-sticky-shade|http://sticky-shade.tiddlyspot.com/|adds shadow under sticky titles|| 
-#Layout UI|| 
-Change the background color of a tiddler|http://eucaly-tw5.tiddlyspot.com/#Change%20the%20background%20color%20of%20a%20tiddler| || 
-Control what elements are visible in edit mode|https://giffmex.org/gifts/documenting.tw.html#Control%20what%20is%20visible%20in%20edit%20mode|a button that opens an options panel. Hide any and every portion of the edit mode except the text field. Great for getting rid of clutter while you write.|| 
-Customizer plugin|https://giffmex.org/gifts/Customizer/customizer.html|a plugin to help you customize tiddlers and the sidebar in numerous ways. There are also custom sidebar elements and viewtemplate elements to add on to the plugin, and instructions on how to make your own addons.|| 
-Custom ViewTemplates for labeled tiddlers|http://tw5magick.tiddlyspot.com/| || 
-EditButtons|https://tid.li/tw5/plugins.html#%24%3A%2Fplugins%2Ftelmiger%2FEditButtons|Edit toolbar buttons for efficient editing processes inspired by Josiah and Richard William Smith. Allows saving tiddler without closing.|| 
-Editor toolbar buttons SK|http://skplugins.tiddlyspot.com/| || 
-Editor toolbar buttons (Ton)|http://80.56.108.132/TW5/TW5_playground.html#Editor%20toolbar%20buttons|buttons for the editor toolbar by Ton Gerner|| 
-Full-screen editor|http://j.d.fullscreen.tiddlyspot.com/) -- edit the current tiddler distraction-free with the click of a single button|| 
-Grouped buttons|http://j.d.groupedbuttons.tiddlyspot.com/|This is a tool for creating groups of buttons for the the **View Template**, **Edit Template**, and **Page Controls**|| 
-Popout menu|http://ooktech.com/jed/ExampleWikis/Text%20Menus/upgrade.html|moves the tiddler toolbars to the right of the tiddler|| 
-Semantic colors|https://kookma.github.io/TW-Semantic-Colors/|This is a set of CSS to apply colorful themes to individual tiddlers for categorization purposes. || 
-Shiraz|https://kookma.github.io/TW-Shiraz/) Shiraz plugin contains several macros, and extended markups and customization and can be used as a starter kit.|| 
-Stoplight colors for delete, cancel and done|https://giffmex.org/gifts/documenting.tw.html#Stoplight%20colors%20for%20delete%2C%20cancel%20and%20done| || 
-Tag editor dropdown style (giffmex)|https://giffmex.org/gifts/documenting.tw.html#Tag%20editor%20dropdown|displays the tags in rows and gives them a readable gray background.|| 
-TiddlerSidebar|http://tiddlersidebar.tiddlyspot.com/|a tiddler-contextual, in-tiddler, on-hover, mini-sidebar || 
-Toggle!|https://giffmex.org/gifts/Toggle/toggle.html|a sidebar tab to customize viewtemplate, edittemplate, sidebar, and other visual elements, as well as view backlinks, and reduce the size of tiddler frames, gaps and titles.|| 
-typestemplate|http://bjtools.tiddlyspot.com/|Enables the user to setup edit and view templates for each type - defaults to non-plugin behavior.|| 
-ViewFields|http://viewfields.tiddlyspot.com/|for modifying edittemplates and viewtemplates|| 
-A Simple Contact Database|http://tw5magick.tiddlyspot.com/) -- Stephan Hradek, instructions, though dated, will help the user understand how to use view templates to construct a complete TiddlyWiki application.|| 
-
+<div created="20210322135034096" modified="20210324135400813" tags="tool" title="incoming" type="text/plain">
+<pre>#Layout UI TopMenu
+Topmenu plugin|http://80.56.108.132/TW5/TW5_playground.html#Top%20menu%20plugin|
+Top + Left (Ton Gerner)|http://80.56.108.132/TW5/TW5_playground.html#Top%20%2B%20left%20menu%20plugin|A plugin for a top menu and a switchable left menu.
+Top toolbar plugin (Ton Gerner)|http://80.56.108.132/TW5/TW5_playground.html#Top%20toolbar%20plugin| 
 </pre>
 </div>
 <div created="20210322022322630" modified="20210322033426555" tags="tool" title="incoming 1" type="text/plain">
@@ -11684,6 +11692,42 @@ Timestamp plugin|http://80.56.108.132/TW5/TW5_playground.html#Timestamp%20button
 vis.js Timeline|http://kixam.github.io/TW5-visjsTimeline/|The visjs Timline exported to TiddlyWiki|Dates_and_Time
 </pre>
 </div>
+<div created="20210324135341987" modified="20210324135344339" tags="tool" title="incoming 20" type="text/plain">
+<pre>#Layout UI
+Shiraz multicol macro|https://kookma.github.io/TW-Shiraz/#| |StoryRiver
+Stories plugin / Two columns of tiddlers (Stroll)|https://giffmex.org/gifts/documenting.tw.html#Two%20columns%20of%20tiddlers|plugin and documentation on how to have two columns of tiddlers like Stroll.|StoryRiver| 
+#Layout 
+Muuri / TiddlyTouch|https://burningtreec.github.io/tiddlywiki-muuri/| |Muuri
+Andy Matuschak's Evergreen notes|https://notes.andymatuschak.org/| system into TiddlyWiki| 
+LibreNote|https://librenote.aerobatic.io/| |
+#Grid
+Grid|https://szenio.de/Grid/|This Tests implements a Grid-Layout to Tiddlywiki.|Grid|| 
+Muuri / TiddlyTouch|https://burningtreec.github.io/tiddlywiki-muuri/|Includes scaffolding within a tiddler, dragging to reorder tiddlers, choosing the number of columns|Muuri
+Teasers|http://teasers.tiddlyspot.com/| || 
+sticky-shade|http://sticky-shade.tiddlyspot.com/|adds shadow under sticky titles|| 
+#Layout UI|| 
+Change the background color of a tiddler|http://eucaly-tw5.tiddlyspot.com/#Change%20the%20background%20color%20of%20a%20tiddler| || 
+Control what elements are visible in edit mode|https://giffmex.org/gifts/documenting.tw.html#Control%20what%20is%20visible%20in%20edit%20mode|a button that opens an options panel. Hide any and every portion of the edit mode except the text field. Great for getting rid of clutter while you write.|| 
+Customizer plugin|https://giffmex.org/gifts/Customizer/customizer.html|a plugin to help you customize tiddlers and the sidebar in numerous ways. There are also custom sidebar elements and viewtemplate elements to add on to the plugin, and instructions on how to make your own addons.|| 
+Custom ViewTemplates for labeled tiddlers|http://tw5magick.tiddlyspot.com/| || 
+EditButtons|https://tid.li/tw5/plugins.html#%24%3A%2Fplugins%2Ftelmiger%2FEditButtons|Edit toolbar buttons for efficient editing processes inspired by Josiah and Richard William Smith. Allows saving tiddler without closing.|| 
+Editor toolbar buttons SK|http://skplugins.tiddlyspot.com/| || 
+Editor toolbar buttons (Ton)|http://80.56.108.132/TW5/TW5_playground.html#Editor%20toolbar%20buttons|buttons for the editor toolbar by Ton Gerner|| 
+Full-screen editor|http://j.d.fullscreen.tiddlyspot.com/) -- edit the current tiddler distraction-free with the click of a single button|| 
+Grouped buttons|http://j.d.groupedbuttons.tiddlyspot.com/|This is a tool for creating groups of buttons for the the **View Template**, **Edit Template**, and **Page Controls**|| 
+Popout menu|http://ooktech.com/jed/ExampleWikis/Text%20Menus/upgrade.html|moves the tiddler toolbars to the right of the tiddler|| 
+Semantic colors|https://kookma.github.io/TW-Semantic-Colors/|This is a set of CSS to apply colorful themes to individual tiddlers for categorization purposes. || 
+Shiraz|https://kookma.github.io/TW-Shiraz/) Shiraz plugin contains several macros, and extended markups and customization and can be used as a starter kit.|| 
+Stoplight colors for delete, cancel and done|https://giffmex.org/gifts/documenting.tw.html#Stoplight%20colors%20for%20delete%2C%20cancel%20and%20done| || 
+Tag editor dropdown style (giffmex)|https://giffmex.org/gifts/documenting.tw.html#Tag%20editor%20dropdown|displays the tags in rows and gives them a readable gray background.|| 
+TiddlerSidebar|http://tiddlersidebar.tiddlyspot.com/|a tiddler-contextual, in-tiddler, on-hover, mini-sidebar || 
+Toggle!|https://giffmex.org/gifts/Toggle/toggle.html|a sidebar tab to customize viewtemplate, edittemplate, sidebar, and other visual elements, as well as view backlinks, and reduce the size of tiddler frames, gaps and titles.|| 
+typestemplate|http://bjtools.tiddlyspot.com/|Enables the user to setup edit and view templates for each type - defaults to non-plugin behavior.|| 
+ViewFields|http://viewfields.tiddlyspot.com/|for modifying edittemplates and viewtemplates|| 
+A Simple Contact Database|http://tw5magick.tiddlyspot.com/) -- Stephan Hradek, instructions, though dated, will help the user understand how to use view templates to construct a complete TiddlyWiki application.|| 
+
+</pre>
+</div>
 <div created="20210322142015477" modified="20210322142020376" tags="tool" title="incoming 3" type="text/plain">
 <pre>https://github.com/OokTech/TW5-Bob|https://github.com/OokTech/TW5-Bob||Collaboration
 https://dat-tiddlywiki.glitch.me/|https://dat-tiddlywiki.glitch.me/|&quot;Multiwriter Peer-to-Peer TiddlyWikis! This is a Progressive Web App built to demonstrate the use of the new multi-writer capabilities from the Dat Project. Make wikis and use them online or offline, and sync between multiple devices or users.&quot;|Collaboration
@@ -11916,42 +11960,13 @@ Téléologie et fonctions biologiques|http://tesis.tiddlyspot.com/#.|a thesis ex
 <div created="20210322192947615" modified="20210322203124101" tags="Developer $:/tags/Link" title="Pragma Comment" url="https://wikilabs.github.io/editions/pragma-comment/">
 <pre>Pragma Comment - Allows utility authors to write comments in the pragma area</pre>
 </div>
-<div created="20210322024430988" modified="20210324034519394" tags="tool" title="Process By Hand">
-<pre>&lt;!-- &lt;$list filter=&quot;[tag[tags-link]]&quot;&gt; 
-&lt;$list filter=&quot;[tag[$:/tags/Link]filter&lt;myfilt&gt;]&quot;&gt;
-
---&gt;
-&lt;table&gt;
-&lt;$vars myfilt=&quot;[get[url]prefix[https://g]]&quot;&gt;
-&lt;$list filter=&quot;[tag[tags-link]]&quot;&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;$link&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt; &lt;/td&gt;
-&lt;td&gt;&lt;$edit-text field=&quot;text&quot; tag=&quot;input&quot; size=&quot;80&quot;/&gt; &lt;/td&gt;
-&lt;td&gt;&lt;a href={{!!url}} target=&quot;_blank&quot;.&gt;link&lt;/a&gt; &lt;/td&gt;
-&lt;td&gt;&lt;$checkbox tag=&quot;$:/tags/Link&quot;&gt;Ok&lt;/$checkbox&gt;&lt;/td&gt;
-&lt;td&gt;&lt;$checkbox tag=&quot;badurl&quot;&gt;badurl&lt;/$checkbox&gt;&lt;/td&gt;
-&lt;td&gt;&lt;$checkbox tag=&quot;problem&quot;&gt;problem&lt;/$checkbox&gt;&lt;/td&gt;
-&lt;td&gt;&lt;$checkbox tag=&quot;tags-link&quot;&gt;un/list&lt;/$checkbox&gt;&lt;/td&gt;
-&lt;td&gt;
-{{||$:/core/ui/EditTemplate/tags}}
-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td colspan=&quot;5&quot;&gt;&lt;$edit-text field=&quot;url&quot; tag=&quot;input&quot; size=&quot;100&quot;/&gt; &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/$list&gt;
-&lt;/$vars&gt;
-&lt;/table&gt;
-
-&lt;&lt;title&gt;&gt; - &lt;&lt;description&gt;&gt; - &lt;&lt;url&gt;&gt;&lt;br/&gt;&lt;br/&gt;
-tags/Link
-</pre>
-</div>
-<div created="20210322022337069" modified="20210323233140851" tags="tool" title="Process Incoming">
+<div created="20210322022337069" modified="20210324141848715" tags="tool" title="Process Incoming">
 <pre>Add Tags: &lt;$edit-text tiddler=&quot;$:/appendtags&quot; field=&quot;text&quot; tag=&quot;input&quot; size=&quot;40&quot; default=&quot;Tagme&quot;/&gt;&lt;br style=&quot;height:1.5em&quot;/&gt;
 Add Prefix ID: &lt;$edit-text tiddler=&quot;$:/appendprefix&quot; field=&quot;text&quot; tag=&quot;input&quot; size=&quot;40&quot; default=&quot;AA&quot;/&gt;&lt;br/&gt;
 
-
 &lt;$button&gt;Process
 &lt;$list filter=&quot;[[incoming]get[text]splitregexp[\n]!prefix[#]]&quot;&gt;
+&lt;$list filter=&quot;[all[current]addsuffix[| | |]]&quot;&gt;
 &lt;$list filter=&quot;[all[current]splitregexp[\|]nth[1]]&quot; variable=&quot;title&quot; &gt;
 &lt;$list filter=&quot;[all[current]splitregexp[\|]nth[2]]&quot; variable=&quot;url&quot; &gt;
 &lt;$list filter=&quot;[all[current]splitregexp[\|]nth[3]]&quot; variable=&quot;description&quot; &gt;
@@ -11962,6 +11977,7 @@ Add Prefix ID: &lt;$edit-text tiddler=&quot;$:/appendprefix&quot; field=&quot;te
  text={{{[&lt;title&gt;addsuffix[ - ]addsuffix&lt;description&gt;] }}}
  url=&lt;&lt;url&gt;&gt;
 /&gt;
+&lt;/$list&gt;
 &lt;/$list&gt;
 &lt;/$list&gt;
 &lt;/$list&gt;
@@ -12144,6 +12160,15 @@ tags/Link
 </div>
 <div created="20210322144203097" modified="20210322144456063" tags="TableOfContents Counting $:/tags/Link" title="TOC Counting" url="https://hchaase.github.io/HC-Plugins/">
 <pre>This counting plugin adds a count of child tiddlers to the right of each TOC entry</pre>
+</div>
+<div created="20210324141916608" modified="20210324143719084" tags="Layout UI $:/review TopMenu $:/tags/Link" title="Top + Left (Ton Gerner) (UI4)" url="http://80.56.108.132/TW5/TW5_playground.html#Top%20%2B%20left%20menu%20plugin">
+<pre>A plugin for a top menu and a switchable left menu.</pre>
+</div>
+<div created="20210324141916609" modified="20210324143716767" tags="Layout UI $:/review TopMenu $:/tags/Link" title="Top toolbar plugin (Ton Gerner) (UI4)" url="http://80.56.108.132/TW5/TW5_playground.html#Top%20toolbar%20plugin">
+<pre>Top toolbar plugin</pre>
+</div>
+<div created="20210324141916602" modified="20210324143716084" tags="Layout UI $:/review TopMenu $:/tags/Link" title="Topmenu plugin  (UI4)" url="http://80.56.108.132/TW5/TW5_playground.html#Top%20menu%20plugin">
+<pre>Topmenu plugin</pre>
 </div>
 <div created="20210322192947620" modified="20210322204740116" tags="Developer problem" title="Trace-variable example" url="http://eucaly-tw5.tiddlyspot.com/#trace-variable%20Example" verified="false">
 <pre>Trace-variable example - no clue what this is.</pre>
